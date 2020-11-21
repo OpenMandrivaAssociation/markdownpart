@@ -7,7 +7,12 @@ Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5Parts)
+BuildRequires:	cmake
+BuildRequires:	ninja
 
 %description
 Markdown display engine for Plasma
