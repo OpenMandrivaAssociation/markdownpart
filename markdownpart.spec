@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Markdown display engine for Plasma
 Name:		markdownpart
-Version:	22.07.90
+Version:	22.08.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
