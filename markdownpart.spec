@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Markdown display engine for Plasma
 Name:		markdownpart
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
@@ -19,7 +19,6 @@ Markdown display engine for Plasma
 
 %files -f %{name}.lang
 %{_libdir}/qt5/plugins/kf5/parts/markdownpart.so
-%{_datadir}/kservices5/markdownpart.desktop
 %{_datadir}/metainfo/org.kde.markdownpart.metainfo.xml
 
 %prep
