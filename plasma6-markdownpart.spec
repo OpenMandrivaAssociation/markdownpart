@@ -5,7 +5,7 @@
 Summary:	Markdown display engine for Plasma
 Name:		plasma6-markdownpart
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
