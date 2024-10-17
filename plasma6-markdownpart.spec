@@ -8,7 +8,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
-Url:		http://kde.org/
+Url:		https://kde.org/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/markdownpart/-/archive/%{gitbranch}/markdownpart-%{gitbranchd}.tar.bz2#/markdownpart-%{git}.tar.bz2
 %else
