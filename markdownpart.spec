@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Markdown display engine for Plasma
 Name:		markdownpart
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -18,26 +18,15 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6I18n)
 BuildRequires:	cmake(KF6Parts)
-BuildRequires:	cmake
-BuildRequires:	ninja
+
+%rename plasma6-markdownpart
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Markdown display engine for Plasma
 
-%files -f markdownpart.lang
+%files -f %{name}.lang
 %{_libdir}/qt6/plugins/kf6/parts/markdownpart.so
 %{_datadir}/metainfo/org.kde.markdownpart.metainfo.xml
-
-%prep
-%autosetup -p1 -n markdownpart-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang markdownpart --with-html
