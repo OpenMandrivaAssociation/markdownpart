@@ -5,7 +5,7 @@
 Summary:	Markdown display engine for Plasma
 Name:		markdownpart
 Version:	25.08.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://kde.org/
